@@ -1,0 +1,12 @@
+node_modules
+.next
+dist
+.vinext
+.wrangler
+coverage
+.git
+.env*
+Portfolio - AI SQL Agent
+README.md
+tests
+*.log
