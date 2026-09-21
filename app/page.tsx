@@ -203,7 +203,7 @@ export default function Home() {
             <header className="panel-header">
               <div>
                 <p className="panel-eyebrow">AI SQL agent</p>
-                <h3 id="chat-title">Ask the schema</h3>
+                <h3 id="chat-title">Ask the agent</h3>
               </div>
               <span className="panel-badge">
                 <span className="status-dot" aria-hidden="true" /> Online
