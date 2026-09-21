@@ -28,7 +28,7 @@ const webhookUrl =
   "https://webhook.n8n.mindthedata.com.br/webhook/chat";
 const powerBiUrl =
   process.env.NEXT_PUBLIC_POWER_BI_EMBED_URL?.trim() ||
-  "https://app.powerbi.com/view?r=eyJrIjoiYjY1MTE1MTItZjc0My00NTdiLWE3ODYtMDJiZDg4ZWMzNjkyIiwidCI6IjdmYjJkZGI5LWI3MmMtNGMxMy05ZDZkLWYyNDRiZWViNzZmZiJ9";
+  "https://app.powerbi.com/view?r=eyJrIjoiODY1YWVmMzMtZjk5NC00MmM4LThjMTAtYmNlZmNhZWE1N2VkIiwidCI6IjdmYjJkZGI5LWI3MmMtNGMxMy05ZDZkLWYyNDRiZWViNzZmZiJ9";
 
 function extractReply(payload: unknown): WebhookReply | null {
   if (typeof payload === "string" && payload.trim()) {
