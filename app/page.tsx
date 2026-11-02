@@ -16,9 +16,9 @@ type WebhookReply = {
 };
 
 const suggestedQuestions = [
-  "How many orders were placed last month?",
-  "List the customers who purchased the most in the last quarter.",
-  "Show me the top five products by revenue.",
+  "Net revenue this year",
+  "Net revenue by category this year",
+  "Top 10 customers for Q1",
 ];
 
 const initialMessages: Message[] = [];
