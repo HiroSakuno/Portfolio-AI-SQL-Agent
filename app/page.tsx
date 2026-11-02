@@ -16,9 +16,9 @@ type WebhookReply = {
 };
 
 const suggestedQuestions = [
-  "How many orders were placed last month?",
-  "List the customers who purchased the most in the last quarter.",
-  "Show me the top five products by revenue.",
+  "Net revenue this year",
+  "Net revenue by category this year",
+  "Top 10 customers for Q1",
 ];
 
 const initialMessages: Message[] = [];
@@ -27,7 +27,6 @@ const webhookUrl =
   process.env.NEXT_PUBLIC_CHAT_WEBHOOK_URL?.trim() ||
   "https://webhook.n8n.mindthedata.com.br/webhook/chat";
 const powerBiUrl =
-  process.env.NEXT_PUBLIC_POWER_BI_EMBED_URL?.trim() ||
   "https://app.powerbi.com/view?r=eyJrIjoiODY1YWVmMzMtZjk5NC00MmM4LThjMTAtYmNlZmNhZWE1N2VkIiwidCI6IjdmYjJkZGI5LWI3MmMtNGMxMy05ZDZkLWYyNDRiZWViNzZmZiJ9";
 
 function extractReply(payload: unknown): WebhookReply | null {

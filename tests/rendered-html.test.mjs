@@ -30,10 +30,15 @@ test("server-renders the SQL Agent workspace", async () => {
 
   const html = await response.text();
   assert.match(html, /<title>SQL Agent — Ask your data\. Get the signal\.<\/title>/i);
-  assert.match(html, /Ask the schema/);
+  assert.match(html, /Try a question/);
   assert.match(html, /Power BI report/);
   assert.match(html, /Supabase database/);
   assert.match(html, /title="Power BI embedded report"/);
+  assert.ok(
+    html.includes(
+      'src="https://app.powerbi.com/view?r=eyJrIjoiODY1YWVmMzMtZjk5NC00MmM4LThjMTAtYmNlZmNhZWE1N2VkIiwidCI6IjdmYjJkZGI5LWI3MmMtNGMxMy05ZDZkLWYyNDRiZWViNzZmZiJ9"',
+    ),
+  );
   assert.doesNotMatch(html, /Your site is taking shape|Building your site|codex-preview/i);
 });
 
@@ -44,7 +49,6 @@ test("the page keeps its integration configuration client-side", async () => {
   ]);
 
   assert.match(page, /NEXT_PUBLIC_CHAT_WEBHOOK_URL/);
-  assert.match(page, /NEXT_PUBLIC_POWER_BI_EMBED_URL/);
   assert.match(page, /method: "POST"/);
   assert.match(page, /<iframe/);
   assert.match(page, /explanation/);
